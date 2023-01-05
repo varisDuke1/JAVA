@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="85821837-6188-441b-ab8d-d6202ec88930">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT b.nama_mk, dosen.nama_dosen AS Pengajar, b.ruang as ruang, b.kelas, b.waktu, b.Hari, c.periode from matkul_mhs a join mahasiswa on mahasiswa.nrp = a.NRP join admin_data_jadwal b on a.kode_mk = b.id join periode c on c.Pid = b.periodef JOIN dosen ON dosen.nip_dosen = b.pengajar WHERE mahasiswa.nrp = '201111039'ORDER BY b.Hari DESC]]>
+	</queryString>
+	<field name="nama_mk" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Pengajar" class="java.lang.String"/>
+	<field name="ruang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kelas" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="waktu" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Hari" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="periode" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="62" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="802" height="56" uuid="65ea3e31-ccb7-4801-a8c0-d82ba5f9c9d9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Montserrat" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jadwal Kuliah]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="15" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement x="63" y="26" width="180" height="20" uuid="9f7a07d9-f8e7-4bc3-8116-42c1cd98c4c3"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<text><![CDATA[  nama_mk]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="243" y="26" width="100" height="20" uuid="5b17f469-edd0-406e-ab97-7ff3c692fa76"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<text><![CDATA[  Pengajar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="343" y="26" width="68" height="20" uuid="220d4cad-8fad-4701-9acd-84129c14f88f"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<text><![CDATA[  ruang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="411" y="26" width="76" height="20" uuid="65c6a3aa-7277-44ef-9565-42736355d31e"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<text><![CDATA[  kelas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="487" y="26" width="100" height="20" uuid="67d6b83e-54de-4237-9be4-c35f52e3c905"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<text><![CDATA[  waktu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="587" y="26" width="86" height="20" uuid="d706bd2f-00e2-4370-8890-5beaf324f0fb"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<text><![CDATA[  Hari]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="673" y="26" width="90" height="20" uuid="8fc3ae23-dc7b-4237-8b9b-6aee95e3cdd1"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<text><![CDATA[  periode]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="63" y="2" width="180" height="20" uuid="0c8a1679-6c24-4143-acc1-6b86c8cd459f"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[  $F{nama_mk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="243" y="2" width="100" height="20" uuid="95991d93-f477-4667-b4a6-05bec502ea03"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[  $F{Pengajar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="343" y="2" width="68" height="20" uuid="e2c08b15-cad4-4031-9c37-fa1ec2853b4b"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{ruang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="411" y="2" width="76" height="20" uuid="592369bb-2033-44bd-a74e-fa1b50c61d05"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{kelas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="487" y="2" width="100" height="20" uuid="fd2302be-0982-4d84-87df-46fa6a496cdb"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{waktu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="587" y="2" width="86" height="20" uuid="30f62fa5-53a0-453b-b318-854a688f8e32"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{Hari}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="673" y="2" width="90" height="20" uuid="3cc290d4-f3f5-4da7-80e7-547548f0b249"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[  $F{periode}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
