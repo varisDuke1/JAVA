@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="282aa25d-c337-4106-86ee-b65e0580fe6c">
+	<property name="ireport.zoom" value="1.1000000000000005"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from jadwal]]>
+	</queryString>
+	<field name="no_seri" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="maskapai" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dari" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="menuju" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="berangkat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tiba" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipe" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement positionType="Float" x="167" y="0" width="220" height="18" uuid="c3795ba8-110c-4a12-a0f4-aeaa31a87abd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Manajemen Jadwal]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="493" y="8" width="44" height="20" uuid="2604360c-0b69-4fa0-bc41-5b5564a52fb0"/>
+				<text><![CDATA[Harga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="448" y="7" width="29" height="20" uuid="bbf400cf-ef28-4c88-a04c-9d8f94c32554"/>
+				<text><![CDATA[Tipe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="405" y="8" width="27" height="20" uuid="d0ed06d1-5c4a-423b-8f7a-cea947dc5648"/>
+				<text><![CDATA[Tiba]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="336" y="8" width="51" height="20" uuid="b43e8118-5a98-46d7-ab6c-54cf68b1aa30"/>
+				<text><![CDATA[Berangkat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="226" y="7" width="97" height="21" uuid="b4ad65d2-dcd5-482d-898f-03c01e665c13"/>
+				<text><![CDATA[Bandara Kedatangan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="103" y="8" width="113" height="19" uuid="ca41175b-2b24-4bdb-8cf1-d4333481e631"/>
+				<text><![CDATA[Bandara Keberangkatan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="47" y="8" width="45" height="20" uuid="f348d015-afa3-42a7-bafb-3248131796d1"/>
+				<text><![CDATA[Maskapai]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="8" width="20" height="20" uuid="5ca26198-3a93-4ccd-9d31-89cb8521bf87"/>
+				<text><![CDATA[No.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="15" y="6" width="524" height="1" uuid="27a3ecf1-f997-4fec-82a4-b5179bba2276"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<line>
+				<reportElement x="15" y="3" width="522" height="1" uuid="51a3c71e-1cce-415c-8ce9-da26b51480e8"/>
+			</line>
+			<textField>
+				<reportElement x="15" y="11" width="20" height="20" uuid="f2921aac-53f3-42ab-9099-04c3406c2314"/>
+				<textFieldExpression><![CDATA[$F{no_seri}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="47" y="11" width="45" height="20" uuid="6af06753-7da3-48ef-9b74-5876a808d2d6"/>
+				<textFieldExpression><![CDATA[$F{maskapai}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="103" y="11" width="100" height="20" uuid="2234e353-1d25-4a68-8a77-cf94cb8f67dc"/>
+				<textFieldExpression><![CDATA[$F{dari}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="226" y="11" width="100" height="20" uuid="c3a2e10d-38d7-4f47-8328-b062029e1a64"/>
+				<textFieldExpression><![CDATA[$F{menuju}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="336" y="11" width="51" height="20" uuid="6b12020b-0817-4a85-9aad-bf828a4ceaf7"/>
+				<textFieldExpression><![CDATA[$F{berangkat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="387" y="11" width="45" height="20" uuid="b2508fc1-3671-44f9-bdc7-ad542063036f"/>
+				<textFieldExpression><![CDATA[$F{tiba}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="432" y="11" width="45" height="20" uuid="32d4e8bc-e313-4626-8810-9bb56e80d282"/>
+				<textFieldExpression><![CDATA[$F{tipe}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="477" y="11" width="62" height="20" uuid="193a7bd3-39d5-4078-a1ee-f805af7e55ff"/>
+				<textFieldExpression><![CDATA[$F{harga}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="53" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="1" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="2" splitType="Stretch"/>
+	</summary>
+</jasperReport>
